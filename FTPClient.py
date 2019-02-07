@@ -1,13 +1,13 @@
 from ftplib import FTP
 from os import path
 import asyncio
-
+from config import Config
 
 class FTPClient:
     def __init__(self, cwd: str, host: str, port: int):
         self.ftp = FTP()
         self.ftp.connect(host, port)
-        self.ftp.login()
+        self.ftp.login(Config.FTP_LOGIN, Config.FTP_PASSWD, Config.FTP_ACCT)
         self.ftp.cwd(cwd)  # replace with your directory
 
     def upload_file(self, upload: str, save_as: str):

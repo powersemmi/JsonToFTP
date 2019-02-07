@@ -1,6 +1,6 @@
 import json
 import asyncio
-import time
+from config import Config
 
 from FTPClient import FTPClient
 
@@ -24,11 +24,11 @@ def split_list(seq: list, num: int):
 
 
 async def main():
-    parsed_json = parse_json("data.json")
+    parsed_json = parse_json(Config.JSON_FATH)
     # print(parsed_json)
     json1, json2 = split_list(parsed_json, 2)
-    ftp1 = FTPClient(cwd="/", host="localhost", port=1026)
-    ftp2 = FTPClient(cwd="/", host="localhost", port=1026)
+    ftp1 = FTPClient(cwd=Config.CWD, host=Config.FTP_URL, port=Config.PORT)
+    ftp2 = FTPClient(cwd=Config.CWD, host=Config.FTP_URL, port=Config.PORT)
     task1 = asyncio.create_task(
         ftp1.upload_files(json1, 0.0001)
     )

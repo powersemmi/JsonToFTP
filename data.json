@@ -1,0 +1,26 @@
+[
+  {
+    "path": "files/test.txt",
+    "save_as": "test2.txt"
+  },
+  {
+    "path": "files/testTesssst",
+    "save_as": ""
+  },
+  {
+    "path": "files/ngrok-stable-linux-amd64.zip",
+    "save_as": "ngrok_64.zip"
+  },
+  {
+    "path": "files/ngrok-stable-linux-386.zip",
+    "save_as": "ngrok_32.zip"
+  },
+  {
+    "path": "files/Ser1.mp4",
+    "save_as": ""
+  },
+  {
+    "path": "files/Ser2.mp4",
+    "save_as": ""
+  }
+]

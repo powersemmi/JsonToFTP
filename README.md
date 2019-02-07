@@ -15,4 +15,4 @@ Then, in the new console window, run the script
 ``` python JsonToFTP.py ```
 
 ## How to use?
-#TODO
+If you want to connect this script to a third-party server, then look in the config.py
